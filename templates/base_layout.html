@@ -1,0 +1,147 @@
+{% load static %}
+<!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+
+<html>
+<head>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+	{% block content%}
+{% endblock %}
+
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">-->
+
+
+</head>
+<body height="100%">
+<a href="{% url 'accounts:signup' %}"><button class="button" style="vertical-align:middle"><span>Donor </span>
+</button></a>
+<div id="logo">
+ <img class="img-responsive" src="{% static 'img/image1.jpg'%}" >
+    <span class="slogan">Share Hope</span>
+
+</div>
+
+
+
+
+<div class="navbar">
+  <a href="{% url 'about' %}">ABOUT US</a>
+  <a href="{% url 'categories:causes'%}">CAUSES</a>
+  <div class="dropdown">
+    <button class="dropbtn">CHARITIES
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Animal</a>
+      <a href="#">Environmental</a>
+      <a href="#">International NGOs</a>
+		<a href="#">Health</a>
+      <a href="#">Education</a>
+      <a href="#">Arts and Culture</a>
+    </div>
+  </div>
+    <a href="#home">MAP</a>
+  <a href="#news">DONATE</a>
+</div>
+
+ {% block body %}
+ {% endblock %}
+
+
+<footer class="footer-distributed">
+
+			<div class="footer-left">
+
+				<h3>Donate<span>WithUs</span></h3>
+
+				<p class="footer-links">
+					<a href="#">About Us</a>
+					·
+					<a href="#">Causes</a>
+					·
+					<a href="#">Map</a>
+					·
+					<a href="#">Donate</a>
+					·
+					<a href="#">FAQ</a>
+					·
+					<a href="#">Contact</a><br><br><br>
+
+					Donation With Us
+					is the #1 marketplace
+					for Donors and Charities
+					to leverage
+					financial and human capital for worthy
+					causes.
+
+                    Choose your personal favorite charity from
+					more than a million entries or make an
+					instant donation with just 1-2-3 clicks
+					and let the Donate With Us experts do the
+					distribution work for you.
+				</p>
+				<p class="footer-company-name">donatewithus &copy; 2020</p>
+			</div>
+
+			<div class="footer-center">
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span>21 Revolution Street</span> Delhi, India</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+1 555 123456</p>
+				</div>
+
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:support@company.com">contact@donatewithus.com</a></p>
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<p class="footer-company-about">
+					<span>EASY AND SECURE DONATIONS
+						<br>
+
+							Your payment is easy and secure
+						with industry-leading, online banking
+						standard technology.
+
+						Secure and transparent escrow accounting.
+
+					</span>
+
+				</p>
+
+				<div class="footer-icons">
+
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-github"></i></a>
+
+				</div>
+
+			</div>
+
+		</footer>
+
+</body>
+
+
+</html>

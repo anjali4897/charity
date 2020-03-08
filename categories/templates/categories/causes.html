@@ -1,0 +1,30 @@
+
+{% extends 'base_layout.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block content%}
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    {% endblock %}
+</head>
+<body>
+{% block body %}
+{% csrf_token %}
+<br> <br>
+{% for instance in object_list %}
+<div id="base2">
+    <h1>  {{instance.cat_name}} </h1>
+    <P>{{instance.desc }} </P>
+<img  src="{{instance.img.url}}"/>
+
+</div>
+<div id="base3">
+    <h1>  {{instance.cat_name}} </h1>
+    <P>{{instance.desc }} </P>
+<img  src="{{instance.img.url}}"/>
+
+</div>
+{% endfor %}
+{% endblock %}
+</body>

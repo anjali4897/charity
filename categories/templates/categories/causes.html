@@ -14,17 +14,21 @@
 <br> <br>
 {% for instance in object_list %}
 <div id="base2">
-    <h1>  {{instance.cat_name}} </h1>
-    <P>{{instance.desc }} </P>
-<img  src="{{instance.img.url}}"/>
+    <h2 style="font-family:comic sans ms;font-weight:bold;font-size:25px;padding-left:120px;">  {{instance.cat_name}} </h2>
+    <P style="font-family:comic sans ms">{{instance.desc }} </P>
+<img  src="{{instance.img.url}}" style="float:center;padding-left:90px;" />
+    </div>
+    {% endfor %}
 
-</div>
+ {% for instance in object_list1 %}
 <div id="base3">
-    <h1>  {{instance.cat_name}} </h1>
-    <P>{{instance.desc }} </P>
-<img  src="{{instance.img.url}}"/>
+    <h1 style="font-family:comic sans ms;font-weight:bold;font-size:25px;padding-left:120px;">  {{instance.cat_name}} </h1>
+    <P style="font-family:comic sans ms">{{instance.desc }} </P>
+<img  src="{{instance.img.url}}" style="float:center;padding-left:90px;"/>
 
 </div>
 {% endfor %}
+
+
 {% endblock %}
 </body>

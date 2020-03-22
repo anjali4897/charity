@@ -1,10 +1,42 @@
+
+{% extends 'base_layout.html' %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    {% block content%}
+    <link rel="stylesheet" href="{% static 'css/charity_list.css' %}">
+    {% endblock %}
 </head>
-<body>
+<div>
+{% block body %}
+{% csrf_token %}
 
+<br> <br>
+
+{% for instance in object_list %}
+
+<div id="base2">
+    <img style="height:60px;" src="{{instance.img.url}}"  />
+    <h1>{{instance.ch_type}} </h1>
+    <p>{{instance.ch_intro }} </p>
+    <p>{{instance.ch_about }} </p>
+    <h4>Connect With Us:<p>{{instance.ch_address }}<br>
+        {{instance.ch_contact }}</h4> </p>
+    <p><a href="mailto:support@company.com" style="text-decoration:none;;font-family:tahomafont-size:20px;">{{instance.ch_email }}</a> </p>
+    <p>{{instance.ch_license }}</p>
+
+    <div class="button2" id="button-7">
+    <div id="dub-arrow"><img src="https://github.com/atloomer/atloomer.github.io/blob/master/img/iconmonstr-arrow-48-240.png?raw=true" alt="" /></div>
+    <a href="#" style="text-decoration:none; font-family:cookie;font-size:30px;">Donate Here</a>
+  </div>
+
+    </div>
+
+    {% endfor %}
+
+
+
+
+{% endblock %}
 </body>
-</html>
